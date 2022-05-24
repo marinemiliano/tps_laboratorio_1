@@ -1,1 +1,16 @@
-Info: Nothing to build for TP1
+00:10:28 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ValidarDatos.o" "..\\src\\ValidarDatos.c" 
+..\src\ValidarDatos.c: In function 'ValidarDatos':
+..\src\ValidarDatos.c:11:14: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   11 |              printf("%s",MensajeError);
+      |              ^~~~~~
+..\src\ValidarDatos.c:11:14: warning: incompatible implicit declaration of built-in function 'printf'
+..\src\ValidarDatos.c:5:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+    4 | #include "ValidarDatos.h"
+  +++ |+#include <stdio.h>
+    5 | 
+gcc -o TP1.exe "src\\CalculoDatos.o" "src\\PedirDatos.o" "src\\TP1.o" "src\\ValidarDatos.o" 
+
+00:10:29 Build Finished. 0 errors, 2 warnings. (took 675ms)
+

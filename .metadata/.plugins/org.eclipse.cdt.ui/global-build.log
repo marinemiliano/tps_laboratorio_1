@@ -1,5 +1,89 @@
-14:46:36 **** Rebuild of configuration Debug for project TP1 ****
+00:09:13 **** Clean-only build of configuration Debug for project TP1 ****
+rm -rf src/ValidarDatos.d src/TP1.d src/PedirDatos.d src/CalculoDatos.o src/ValidarDatos.o TP1.exe src/CalculoDatos.d src/TP1.o src/PedirDatos.o 
+00:09:15 **** Rebuild of configuration Debug for project TP1 ****
 Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\CalculoDatos.o" "..\\src\\CalculoDatos.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP1.o" "..\\src\\TP1.c" 
-gcc -o TP1.exe "src\\TP1.o" 
-Info: Nothing to build for TP1
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PedirDatos.o" "..\\src\\PedirDatos.c" 
+..\src\PedirDatos.c: In function 'PedirDatos':
+..\src\PedirDatos.c:15:8: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   15 |        printf("%s",mensaje);
+      |        ^~~~~~
+..\src\PedirDatos.c:15:8: warning: incompatible implicit declaration of built-in function 'printf'
+..\src\PedirDatos.c:9:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+    8 | #include "PedirDatos.h"
+  +++ |+#include <stdio.h>
+    9 | 
+..\src\PedirDatos.c:16:8: warning: implicit declaration of function 'scanf' [-Wimplicit-function-declaration]
+   16 |        scanf("%d",&numeroIngresado);
+      |        ^~~~~
+..\src\PedirDatos.c:16:8: warning: incompatible implicit declaration of built-in function 'scanf'
+..\src\PedirDatos.c:16:8: note: include '<stdio.h>' or provide a declaration of 'scanf'
+..\src\PedirDatos.c:18:25: warning: implicit declaration of function 'ValidarDatos' [-Wimplicit-function-declaration]
+   18 |         numeroIngresado=ValidarDatos(numeroIngresado,"Error, valor ingresado fue cero o menor, reingrese cifra.\n");
+      |                         ^~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ValidarDatos.o" "..\\src\\ValidarDatos.c" 
+..\src\ValidarDatos.c: In function 'ValidarDatos':
+..\src\ValidarDatos.c:8:9: error: 'numero' redeclared as different kind of symbol
+    8 |     int numero;
+      |         ^~~~~~
+..\src\ValidarDatos.c:6:22: note: previous definition of 'numero' was here
+    6 | int ValidarDatos(int numero,char MensajeError[])
+      |                  ~~~~^~~~~~
+..\src\ValidarDatos.c:11:14: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   11 |              printf("%s",MensajeError);
+      |              ^~~~~~
+..\src\ValidarDatos.c:11:14: warning: incompatible implicit declaration of built-in function 'printf'
+..\src\ValidarDatos.c:5:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+    4 | #include "ValidarDatos.h"
+  +++ |+#include <stdio.h>
+    5 | 
+..\src\ValidarDatos.c:12:14: warning: implicit declaration of function 'scanf' [-Wimplicit-function-declaration]
+   12 |              scanf("%d",&numero);
+      |              ^~~~~
+..\src\ValidarDatos.c:12:14: warning: incompatible implicit declaration of built-in function 'scanf'
+..\src\ValidarDatos.c:12:14: note: include '<stdio.h>' or provide a declaration of 'scanf'
+00:09:39 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ValidarDatos.o" "..\\src\\ValidarDatos.c" 
+..\src\ValidarDatos.c: In function 'ValidarDatos':
+..\src\ValidarDatos.c:11:14: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   11 |              printf("%s",MensajeError);
+      |              ^~~~~~
+..\src\ValidarDatos.c:11:14: warning: incompatible implicit declaration of built-in function 'printf'
+..\src\ValidarDatos.c:5:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+    4 | #include "ValidarDatos.h"
+  +++ |+#include <stdio.h>
+    5 | 
+..\src\ValidarDatos.c:12:14: warning: implicit declaration of function 'scanf' [-Wimplicit-function-declaration]
+   12 |              scanf("%d",&numero);
+      |              ^~~~~
+..\src\ValidarDatos.c:12:14: warning: incompatible implicit declaration of built-in function 'scanf'
+..\src\ValidarDatos.c:12:14: note: include '<stdio.h>' or provide a declaration of 'scanf'
+gcc -o TP1.exe "src\\CalculoDatos.o" "src\\PedirDatos.o" "src\\TP1.o" "src\\ValidarDatos.o" 
+00:10:02 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ValidarDatos.o" "..\\src\\ValidarDatos.c" 
+..\src\ValidarDatos.c: In function 'ValidarDatos':
+..\src\ValidarDatos.c:11:14: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   11 |              printf("%s",MensajeError);
+      |              ^~~~~~
+..\src\ValidarDatos.c:11:14: warning: incompatible implicit declaration of built-in function 'printf'
+..\src\ValidarDatos.c:5:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+    4 | #include "ValidarDatos.h"
+  +++ |+#include <stdio.h>
+    5 | 
+gcc -o TP1.exe "src\\CalculoDatos.o" "src\\PedirDatos.o" "src\\TP1.o" "src\\ValidarDatos.o" 
+00:10:28 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ValidarDatos.o" "..\\src\\ValidarDatos.c" 
+..\src\ValidarDatos.c: In function 'ValidarDatos':
+..\src\ValidarDatos.c:11:14: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   11 |              printf("%s",MensajeError);
+      |              ^~~~~~
+..\src\ValidarDatos.c:11:14: warning: incompatible implicit declaration of built-in function 'printf'
+..\src\ValidarDatos.c:5:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+    4 | #include "ValidarDatos.h"
+  +++ |+#include <stdio.h>
+    5 | 
+gcc -o TP1.exe "src\\CalculoDatos.o" "src\\PedirDatos.o" "src\\TP1.o" "src\\ValidarDatos.o" 
